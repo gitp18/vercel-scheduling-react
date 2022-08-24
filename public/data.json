@@ -1,0 +1,353 @@
+{
+  "days": {"2D": 2, "5D": 5, "7D": 7},
+  "products": {
+    "2D": [{"name": "2P1", "machines": [ "M1", "M2"]}, {"name": "2P2", "machines": [ "M2", "M3"]}, {"name": "2P3", "machines": [ "M1", "M3"]}],
+    "5D": [{"name": "5P1", "machines": [ "M1", "M2"]}, {"name": "5P2", "machines": [ "M2", "M3"]}, {"name": "5P3", "machines": [ "M1", "M3"]}],
+    "7D": [{"name": "7P1", "machines": [ "M1", "M2"]}, {"name": "7P2", "machines": [ "M2", "M3"]}, {"name": "7P3", "machines": [ "M1", "M3"]}]
+  },
+
+
+  "displayData": {
+    "2D2P1": {
+      "productData":  {
+        "2P1": { "shifts": 12, "die": 1, "demand": 120, "inventory": 100 }
+      },
+      "machineData": [
+        {"name": "M1", "ProductionPershift": 12, "TotalMachineCounts": 1 },
+        {"name": "M2", "ProductionPershift": 28, "TotalMachineCounts": 1 }
+      ],
+      "tableData":  [
+        ["Machine / Shift",	"Day1 - S1",	"Day1 - S2",	"Day1 - S3",	"Day2 - S4",	"Day2 - S5",	"Day2 - S6"],
+        ["M1",	"2P1",	"2P1",	"2P1",	"",	"2P1",	"2P1"],
+        ["M2",	"2P1",	"2P1",	"2P1",	"2P1",	"2P1",	"2P1"]
+      ],
+      "inputText": {
+        "productInput": "Product 2PI has 1 die and 100 inventory. It has to run for 12 shifts to fulfill the demand of 120.Product 2P1 can be loaded on Machine M1 & M2.",
+        "machineInput": "Company has 1 M1, which can die 12 products per shift.and 1 M2, which can die 28 products per shift."
+      }
+    },
+    "2D2P2": {
+      "productData":  {
+        "2P2": { "shifts": 12, "die": 1, "demand": 120, "inventory": 100 }
+      },
+      "machineData": [
+        {"name": "M2", "ProductionPershift": 12, "TotalMachineCounts": 1 },
+        {"name": "M3", "ProductionPershift": 28, "TotalMachineCounts": 1 }
+      ],
+      "tableData":  [
+        ["Machine / Shift",	"Day1 - S1",	"Day1 - S2",	"Day1 - S3",	"Day2 - S4",	"Day2 - S5",	"Day2 - S6"],
+        ["M2",	"2P2",	"2P2",	"2P2",	"",	"2P2",	"2P2"],
+        ["M3",	"2P2",	"2P2",	"2P2",	"2P2",	"2P2",	"2P2"]
+      ]
+    },
+    "2D2P3": {
+      "productData":  {
+        "2P3": { "shifts": 12, "die": 1, "demand": 120, "inventory": 100 }
+      },
+      "machineData": [
+        {"name": "M1", "ProductionPershift": 12, "TotalMachineCounts": 1 },
+        {"name": "M3", "ProductionPershift": 28, "TotalMachineCounts": 1 }
+      ],
+      "tableData":  [
+        ["Machine / Shift",	"Day1 - S1",	"Day1 - S2",	"Day1 - S3",	"Day2 - S4",	"Day2 - S5",	"Day2 - S6"],
+        ["M1",	"2P3",	"2P3",	"2P3",	"",	"2P3",	"2P3"],
+        ["M3",	"2P3",	"2P3",	"2P3",	"2P3",	"2P3",	"2P3"]
+      ]
+    },
+    "2D2P12P2": {
+      "productData":  {
+        "2P1": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 }, 
+        "2P2": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 }
+      },
+      "machineData": [
+        {"name": "M1", "ProductionPershift": 12, "TotalMachineCounts": 1 },
+        {"name": "M2", "ProductionPershift": 28, "TotalMachineCounts": 1 },
+        {"name": "M3", "ProductionPershift": 28, "TotalMachineCounts": 1 }
+      ],
+      "tableData":  [
+        ["Machine / Shift",	"Day1 - S1",	"Day1 - S2",	"Day1 - S3",	"Day2 - S4",	"Day2 - S5",	"Day2 - S6"],
+        ["M1",	"2P1",	"2P2",	"2P2",	"",	"2P1",	""],
+        ["M2",	"2P1",	"",	"2P1",	"2P2",	"2P1",	""],
+        ["M3",	"2P2",	"2P1",	"2P1",	"2P2",	"",	""]
+      ]
+    },
+    "2D2P12P3": {
+      "productData":  {
+        "2P1": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 }, 
+        "2P3": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 }
+      },
+      "machineData": [
+        {"name": "M1", "ProductionPershift": 12, "TotalMachineCounts": 1 },
+        {"name": "M2", "ProductionPershift": 28, "TotalMachineCounts": 1 },
+        {"name": "M3", "ProductionPershift": 28, "TotalMachineCounts": 1 }
+      ],
+      "tableData":  [
+        ["Machine / Shift",	"Day1 - S1",	"Day1 - S2",	"Day1 - S3",	"Day2 - S4",	"Day2 - S5",	"Day2 - S6"],
+        ["M1",	"2P1",	"2P3",	"2P3",	"",	"2P3",	""],
+        ["M2",	"2P1",	"2P1",	"2P1",	"2P3",	"2P3",	""],
+        ["M3",	"2P3",	"2P3",	"2P3",	"2P1",	"",	""]
+      ]
+    },
+    "2D2P22P3": {
+      "productData":  {
+        "2P2": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 }, 
+        "2P3": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 }
+      },
+      "machineData": [
+        {"name": "M1", "ProductionPershift": 12, "TotalMachineCounts": 1 },
+        {"name": "M2", "ProductionPershift": 28, "TotalMachineCounts": 1 },
+        {"name": "M3", "ProductionPershift": 28, "TotalMachineCounts": 1 }
+      ],
+      "tableData":  [
+        ["Machine / Shift",	"Day1 - S1",	"Day1 - S2",	"Day1 - S3",	"Day2 - S4",	"Day2 - S5",	"Day2 - S6"],
+        ["M1",	"2P2",	"2P3",	"2P3",	"",	"2P2",	""],
+        ["M2",	"2P2",	"2P2",	"2P3",	"2P2",	"2P3",	""],
+        ["M3",	"2P2",	"2P3",	"2P3",	"2P2",	"",	""]
+      ]
+    },
+    "2D2P12P22P3": {
+      "productData":  {
+        "2P1": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 }, 
+        "2P2": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 }, 
+        "2P3": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 }
+      },
+      "machineData": [
+        {"name": "M1", "ProductionPershift": 12, "TotalMachineCounts": 1 },
+        {"name": "M2", "ProductionPershift": 28, "TotalMachineCounts": 1 },
+        {"name": "M3", "ProductionPershift": 28, "TotalMachineCounts": 1 }
+      ],
+      "tableData":  [
+        ["Machine / Shift",	"Day1 - S1",	"Day1 - S2",	"Day1 - S3",	"Day2 - S4",	"Day2 - S5",	"Day2 - S6"],
+        ["M1",	"2P1",	"2P2",	"2P2",	"2P3",	"2P2",	"2P2"],
+        ["M2",	"2P1",	"2P1",	"2P1",	"2P1",	"2P1",	""],
+        ["M3",	"2P1",	"2P3",	"2P3",	"2P1",	"2P1",	"2P3"]
+      ]
+    },
+
+
+    "5D5P1": {
+      "productData":  {
+        "5P1": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 }
+      },
+      "machineData": [
+        {"name": "M1", "ProductionPershift": 12, "TotalMachineCounts": 1 },
+        {"name": "M2", "ProductionPershift": 28, "TotalMachineCounts": 1 }
+      ],
+      "tableData": [
+        ["Machine / Shift",	"Day1 - S1",	"Day1 - S2",	"Day1 - S3",	"Day2 - S4",	"Day2 - S5",	"Day2 - S6", "Day3 - S7", "Day3 - S8", "Day3 - S9", "Day4 - S10", "Day4 - S11", "Day4 - S12", "Day5 - S13", "Day5 - S14", "Day5 - S15"],
+        ["M1",	"5P1",	"5P1",	"5P1",	"",	"5P1",	"5P1",	"",	"5P1",	"5P1",	"5P1",	"",	"5P1",	"5P1",	"5P1",	""],
+        ["M2",	"5P1",	"5P1",	"5P1",	"5P1",	"5P1",	"5P1",	"",	"5P1",	"5P1",	"5P1",	"",	"5P1",	"5P1", "", ""]
+      ]
+    },
+    "5D5P2": {
+      "productData":  {
+        "5P2": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 }
+      },
+      "machineData": [
+        {"name": "M2", "ProductionPershift": 12, "TotalMachineCounts": 1 },
+        {"name": "M3", "ProductionPershift": 28, "TotalMachineCounts": 1 }
+      ],
+      "tableData": [
+        ["Machine / Shift",	"Day1 - S1",	"Day1 - S2",	"Day1 - S3",	"Day2 - S4",	"Day2 - S5",	"Day2 - S6", "Day3 - S7", "Day3 - S8", "Day3 - S9", "Day4 - S10", "Day4 - S11", "Day4 - S12", "Day5 - S13", "Day5 - S14", "Day5 - S15"],
+        ["M2",	"5P2",	"5P2",	"5P2",	"",	"5P2",	"5P2",	"",	"5P2",	"5P2",	"5P2",	"",	"5P2",	"5P2",	"5P2",	""],
+        ["M3",	"5P2",	"5P2",	"5P2",	"5P2",	"5P2",	"5P2",	"",	"5P2",	"5P2",	"5P2",	"",	"5P2",	"5P2", "", ""]
+      ]
+    },
+    "5D5P3": {
+      "productData":  {
+        "5P3": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 }
+      },
+      "machineData": [
+        {"name": "M1", "ProductionPershift": 12, "TotalMachineCounts": 1 },
+        {"name": "M3", "ProductionPershift": 28, "TotalMachineCounts": 1 }
+      ],
+      "tableData": [
+        ["Machine / Shift",	"Day1 - S1",	"Day1 - S2",	"Day1 - S3",	"Day2 - S4",	"Day2 - S5",	"Day2 - S6", "Day3 - S7", "Day3 - S8", "Day3 - S9", "Day4 - S10", "Day4 - S11", "Day4 - S12", "Day5 - S13", "Day5 - S14", "Day5 - S15"],
+        ["M1",	"5P3",	"5P3",	"5P3",	"",	"5P3",	"5P3",	"",	"5P3",	"5P3",	"5P3",	"",	"5P3",	"5P3",	"5P3",	""],
+        ["M3",	"5P3",	"5P3",	"5P3",	"5P3",	"5P3",	"5P3",	"",	"5P3",	"5P3",	"5P3",	"",	"5P3",	"5P3", "", ""]
+      ]
+    },
+    "5D5P15P2": {
+      "productData":  {
+        "5P1": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 },
+        "5P2": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 }
+      },
+      "machineData": [
+        {"name": "M1", "ProductionPershift": 12, "TotalMachineCounts": 1 },
+        {"name": "M2", "ProductionPershift": 28, "TotalMachineCounts": 1 },
+        {"name": "M3", "ProductionPershift": 28, "TotalMachineCounts": 1 }
+      ],
+      "tableData": [
+        ["Machine / Shift",	"Day1 - S1",	"Day1 - S2",	"Day1 - S3",	"Day2 - S4",	"Day2 - S5",	"Day2 - S6", "Day3 - S7", "Day3 - S8", "Day3 - S9", "Day4 - S10", "Day4 - S11", "Day4 - S12", "Day5 - S13", "Day5 - S14", "Day5 - S15"],
+        ["M1",	"5P1",	"5P1",	"5P1",	"",	"5P1",	"5P1",	"",	"5P1",	"5P1",	"5P1",	"",	"5P1",	"5P1",	"5P1",	""],
+        ["M2",	"5P1",	"5P1",	"5P2",	"5P1",	"5P2",	"5P1",	"",	"5P2",	"5P1",	"5P2",	"",	"5P1",	"5P2", "", ""],
+        ["M3",	"5P2",	"5P2",	"5P2",	"5P2",	"5P2",	"5P2",	"",	"5P2",	"5P2",	"5P2",	"",	"5P2",	"", "", ""]
+      ]
+    },
+    "5D5P25P3": {
+      "productData":  {
+        "5P2": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 },
+        "5P3": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 }
+      },
+      "machineData": [
+        {"name": "M1", "ProductionPershift": 12, "TotalMachineCounts": 1 },
+        {"name": "M2", "ProductionPershift": 28, "TotalMachineCounts": 1 },
+        {"name": "M3", "ProductionPershift": 28, "TotalMachineCounts": 1 }
+      ],
+      "tableData": [
+        ["Machine / Shift",	"Day1 - S1",	"Day1 - S2",	"Day1 - S3",	"Day2 - S4",	"Day2 - S5",	"Day2 - S6", "Day3 - S7", "Day3 - S8", "Day3 - S9", "Day4 - S10", "Day4 - S11", "Day4 - S12", "Day5 - S13", "Day5 - S14", "Day5 - S15"],
+        ["M1",	"5P3",	"5P3",	"5P3",	"",	"5P3",	"5P3",	"",	"5P3",	"5P3",	"5P3",	"",	"5P3",	"5P3",	"5P3",	""],
+        ["M2",	"5P2",	"5P2",	"5P2",	"5P2",	"5P2",	"5P2",	"",	"5P2",	"5P2",	"5P2",	"",	"5P2",	"5P2", "", ""],
+        ["M3",	"5P2",	"5P2",	"5P3",	"5P3",	"5P2",	"5P2",	"",	"5P3",	"5P2",	"5P2",	"",	"",	"", "", ""]
+      ]
+    },
+    "5D5P15P3": {
+      "productData":  {
+        "5P1": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 },
+        "5P3": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 }
+      },
+      "machineData": [
+        {"name": "M1", "ProductionPershift": 12, "TotalMachineCounts": 1 },
+        {"name": "M2", "ProductionPershift": 28, "TotalMachineCounts": 1 },
+        {"name": "M3", "ProductionPershift": 28, "TotalMachineCounts": 1 }
+      ],
+      "tableData": [
+        ["Machine / Shift",	"Day1 - S1",	"Day1 - S2",	"Day1 - S3",	"Day2 - S4",	"Day2 - S5",	"Day2 - S6", "Day3 - S7", "Day3 - S8", "Day3 - S9", "Day4 - S10", "Day4 - S11", "Day4 - S12", "Day5 - S13", "Day5 - S14", "Day5 - S15"],
+        ["M1",	"5P1",	"5P1",	"5P1",	"",	"5P3",	"5P3",	"",	"5P3",	"5P3",	"5P1",	"",	"5P1",	"5P3",	"5P3",	""],
+        ["M2",	"5P1",	"5P1",	"5P1",	"5P1",	"5P1",	"5P1",	"",	"5P1",	"5P1",	"5P1",	"",	"5P1",	"5P1", "", ""],
+        ["M3",	"5P3",	"5P3",	"5P3",	"5P3",	"5P3",	"5P3",	"",	"",	"",	"5P3",	"",	"",	"", "", ""]
+      ]
+    },
+    "5D5P15P25P3": {
+      "productData":  {
+        "5P1": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 },
+        "5P2": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 },
+        "5P3": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 }
+      },
+      "machineData": [
+        {"name": "M1", "ProductionPershift": 12, "TotalMachineCounts": 1 },
+        {"name": "M2", "ProductionPershift": 28, "TotalMachineCounts": 1 },
+        {"name": "M3", "ProductionPershift": 28, "TotalMachineCounts": 1 }
+      ],
+      "tableData": [
+        ["Machine / Shift",	"Day1 - S1",	"Day1 - S2",	"Day1 - S3",	"Day2 - S4",	"Day2 - S5",	"Day2 - S6", "Day3 - S7", "Day3 - S8", "Day3 - S9", "Day4 - S10", "Day4 - S11", "Day4 - S12", "Day5 - S13", "Day5 - S14", "Day5 - S15"],
+        ["M1",	"5P1",	"5P1",	"5P1",	"",	"5P1",	"5P1",	"",	"5P1",	"5P3",	"5P3",	"",	"5P3",	"5P3",	"5P3",	""],
+        ["M2",	"5P1",	"5P1",	"5P2",	"5P2",	"5P2",	"5P1",	"",	"5P1",	"5P1",	"5P1",	"",	"5P1",	"5P1", "", ""],
+        ["M3",	"5P2",	"5P2",	"5P2",	"",	"5P3",	"5P3",	"",	"5P3",	"5P3",	"5P3",	"",	"5P3",	"5P3",	"5P3",	""]
+      ]
+    },
+
+
+    "7D7P1": {
+      "productData":  {
+        "7P1": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 }
+      },
+      "machineData": [
+        {"name": "M1", "ProductionPershift": 12, "TotalMachineCounts": 1 },
+        {"name": "M2", "ProductionPershift": 28, "TotalMachineCounts": 1 }
+      ],
+      "tableData": [
+        ["Machine / Shift",	"Day1 - S1",	"Day1 - S2",	"Day1 - S3",	"Day2 - S4",	"Day2 - S5",	"Day2 - S6", "Day3 - S7", "Day3 - S8", "Day3 - S9", "Day4 - S10", "Day4 - S11", "Day4 - S12", "Day5 - S13", "Day5 - S14", "Day5 - S15", "Day6 - S16", "Day6 - S17", "Day6 - S18", "Day7 - S19", "Day7 - S20", "Day7 - S21"],
+        ["M1",	"7P1",	"7P1",	"7P1",	"",	"7P1",	"7P1",	"",	"7P1",	"7P1",	"7P1",	"",	"7P1",	"7P1",	"7P1",	"",	"7P1",	"7P1",	"7P1",	"",	"7P1",	"7P1"],
+        ["M2",	"7P1",	"7P1",	"7P1",	"7P1",	"7P1",	"7P1",	"",	"7P1",	"7P1",	"7P1",	"",	"7P1",	"7P1",	"7P1",	"",	"7P1",	"7P1",	"7P1",	"",	"7P1",	"7P1"]
+      ]
+    },
+    "7D7P2": {
+      "productData":  {
+        "7P2": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 }
+      },
+      "machineData": [
+        {"name": "M2", "ProductionPershift": 12, "TotalMachineCounts": 1 },
+        {"name": "M3", "ProductionPershift": 28, "TotalMachineCounts": 1 }
+      ],
+      "tableData": [
+        ["Machine / Shift",	"Day1 - S1",	"Day1 - S2",	"Day1 - S3",	"Day2 - S4",	"Day2 - S5",	"Day2 - S6", "Day3 - S7", "Day3 - S8", "Day3 - S9", "Day4 - S10", "Day4 - S11", "Day4 - S12", "Day5 - S13", "Day5 - S14", "Day5 - S15", "Day6 - S16", "Day6 - S17", "Day6 - S18", "Day7 - S19", "Day7 - S20", "Day7 - S21"],
+        ["M2",	"7P2",	"7P2",	"7P2",	"",	"7P2",	"7P2",	"",	"7P2",	"7P2",	"7P2",	"",	"7P2",	"7P2",	"7P2",	"",	"7P2",	"7P2",	"7P2",	"",	"7P2",	"7P2"],
+        ["M3",	"7P2",	"7P2",	"7P2",	"7P2",	"7P2",	"7P2",	"",	"7P2",	"7P2",	"7P2",	"",	"7P2",	"7P2",	"7P2",	"",	"7P2",	"7P2",	"7P2",	"",	"7P2",	"7P2"]
+      ]
+    },
+    "7D7P3": {
+      "productData":  {
+        "7P3": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 }
+      },
+      "machineData": [
+        {"name": "M1", "ProductionPershift": 12, "TotalMachineCounts": 1 },
+        {"name": "M3", "ProductionPershift": 28, "TotalMachineCounts": 1 }
+      ],
+      "tableData": [
+        ["Machine / Shift",	"Day1 - S1",	"Day1 - S2",	"Day1 - S3",	"Day2 - S4",	"Day2 - S5",	"Day2 - S6", "Day3 - S7", "Day3 - S8", "Day3 - S9", "Day4 - S10", "Day4 - S11", "Day4 - S12", "Day5 - S13", "Day5 - S14", "Day5 - S15", "Day6 - S16", "Day6 - S17", "Day6 - S18", "Day7 - S19", "Day7 - S20", "Day7 - S21"],
+        ["M1",	"7P3",	"7P3",	"7P3",	"",	"7P3",	"7P3",	"",	"7P3",	"7P3",	"7P3",	"",	"7P3",	"7P3",	"7P3",	"",	"7P3",	"7P3",	"7P3",	"",	"7P3",	"7P3"],
+        ["M3",	"7P3",	"7P3",	"7P3",	"7P3",	"7P3",	"7P3",	"",	"7P3",	"7P3",	"7P3",	"",	"7P3",	"7P3",	"7P3",	"",	"7P3",	"7P3",	"7P3",	"",	"7P3",	"7P3"]
+      ]
+    },
+    "7D7P17P2": {
+      "productData": {
+        "7P1": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 },
+        "7P2": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 }
+      },
+      "machineData": [
+        {"name": "M1", "ProductionPershift": 12, "TotalMachineCounts": 1 },
+        {"name": "M2", "ProductionPershift": 28, "TotalMachineCounts": 1 },
+        {"name": "M3", "ProductionPershift": 28, "TotalMachineCounts": 1 }
+      ],
+      "tableData": [
+        ["Machine / Shift",	"Day1 - S1",	"Day1 - S2",	"Day1 - S3",	"Day2 - S4",	"Day2 - S5",	"Day2 - S6", "Day3 - S7", "Day3 - S8", "Day3 - S9", "Day4 - S10", "Day4 - S11", "Day4 - S12", "Day5 - S13", "Day5 - S14", "Day5 - S15", "Day6 - S16", "Day6 - S17", "Day6 - S18", "Day7 - S19", "Day7 - S20", "Day7 - S21"],
+        ["M1",	"7P1",	"7P1",	"7P1",	"",	"7P1",	"7P1",	"",	"7P1",	"7P1",	"7P1",	"",	"7P1",	"7P1",	"7P1",	"",	"7P1",	"7P1",	"7P1",	"",	"7P1",	"7P1"],
+        ["M2",	"7P1",	"7P1",	"7P1",	"7P2",	"7P2",	"7P2",	"",	"7P1",	"7P1",	"7P1",	"",	"7P2",	"7P2",	"7P2",	"",	"7P2",	"7P2",	"",	"",	"7P1",	"7P1"],
+        ["M3",	"7P2",	"7P2",	"7P2",	"7P2",	"7P2",	"7P2",	"",	"7P2",	"7P2",	"7P2",	"",	"7P2",	"7P2",	"7P2",	"",	"7P2",	"7P2",	"7P2",	"",	"7P2",	"7P2"]
+      ]
+    },
+    "7D7P27P3": {
+      "productData": {
+        "7P2": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 },
+        "7P3": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 }
+      },
+      "machineData": [
+        {"name": "M1", "ProductionPershift": 12, "TotalMachineCounts": 1 },
+        {"name": "M2", "ProductionPershift": 28, "TotalMachineCounts": 1 },
+        {"name": "M3", "ProductionPershift": 28, "TotalMachineCounts": 1 }
+      ],
+      "tableData": [
+        ["Machine / Shift",	"Day1 - S1",	"Day1 - S2",	"Day1 - S3",	"Day2 - S4",	"Day2 - S5",	"Day2 - S6", "Day3 - S7", "Day3 - S8", "Day3 - S9", "Day4 - S10", "Day4 - S11", "Day4 - S12", "Day5 - S13", "Day5 - S14", "Day5 - S15", "Day6 - S16", "Day6 - S17", "Day6 - S18", "Day7 - S19", "Day7 - S20", "Day7 - S21"],
+        ["M1",	"7P3",	"7P3",	"7P3",	"",	"7P3",	"7P3",	"",	"7P3",	"7P3",	"7P3",	"",	"7P3",	"7P3",	"7P3",	"",	"7P3",	"7P3",	"7P3",	"",	"",	""],
+        ["M2",	"7P2",	"7P2",	"7P2",	"7P2",	"7P2",	"7P2",	"",	"7P2",	"7P2",	"7P2",	"",	"7P2",	"7P2",	"7P2",	"",	"7P2",	"7P2",	"",	"",	"7P2",	"7P2"],
+        ["M3",	"7P2",	"7P2",	"7P2",	"7P3",	"7P3",	"7P3",	"",	"7P2",	"7P2",	"7P2",	"",	"7P3",	"7P3",	"7P3",	"",	"7P2",	"7P2",	"7P3",	"",	"",	""]
+      ]
+    },
+    "7D7P17P3": {
+      "productData": {
+        "7P1": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 },
+        "7P3": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 }
+      },
+      "machineData": [
+        {"name": "M1", "ProductionPershift": 12, "TotalMachineCounts": 1 },
+        {"name": "M2", "ProductionPershift": 28, "TotalMachineCounts": 1 },
+        {"name": "M3", "ProductionPershift": 28, "TotalMachineCounts": 1 }
+      ],
+      "tableData": [
+        ["Machine / Shift",	"Day1 - S1",	"Day1 - S2",	"Day1 - S3",	"Day2 - S4",	"Day2 - S5",	"Day2 - S6", "Day3 - S7", "Day3 - S8", "Day3 - S9", "Day4 - S10", "Day4 - S11", "Day4 - S12", "Day5 - S13", "Day5 - S14", "Day5 - S15", "Day6 - S16", "Day6 - S17", "Day6 - S18", "Day7 - S19", "Day7 - S20", "Day7 - S21"],
+        ["M1",	"7P1",	"7P1",	"7P1",	"",	"7P3",	"7P3",	"",	"7P3",	"7P3",	"7P3",	"",	"7P1",	"7P1",	"7P1",	"",	"7P3",	"7P3",	"7P3",	"",	"7P1",	"7P1"],
+        ["M2",	"7P1",	"7P1",	"7P1",	"7P1",	"7P1",	"7P1",	"",	"7P1",	"7P1",	"7P1",	"",	"7P1",	"7P1",	"7P1",	"",	"7P1",	"7P1",	"7P1",	"",	"7P1",	"7P1"],
+        ["M3",	"7P3",	"7P3",	"7P3",	"7P1",	"7P1",	"7P1",	"",	"7P3",	"7P3",	"7P3",	"",	"7P1",	"7P1",	"7P1",	"",	"7P3",	"7P3",	"7P3",	"",	"7P1",	"7P1"]
+      ]
+    },
+    "7D7P17P27P3": {
+      "productData":  {
+        "7P1": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 },
+        "7P2": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 },
+        "7P3": { "shifts": 12, "die": 1, "demand": 12, "inventory": 100 }
+      },
+      "machineData": [
+        {"name": "M1", "ProductionPershift": 12, "TotalMachineCounts": 1 },
+        {"name": "M2", "ProductionPershift": 28, "TotalMachineCounts": 1 },
+        {"name": "M3", "ProductionPershift": 28, "TotalMachineCounts": 1 }
+      ],
+      "tableData": [
+        ["Machine / Shift",	"Day1 - S1",	"Day1 - S2",	"Day1 - S3",	"Day2 - S4",	"Day2 - S5",	"Day2 - S6", "Day3 - S7", "Day3 - S8", "Day3 - S9", "Day4 - S10", "Day4 - S11", "Day4 - S12", "Day5 - S13", "Day5 - S14", "Day5 - S15", "Day6 - S16", "Day6 - S17", "Day6 - S18", "Day7 - S19", "Day7 - S20", "Day7 - S21"],
+        ["M1",	"7P1",	"7P1",	"7P1",	"",	"7P3",	"7P3",	"",	"7P1",	"7P1",	"7P1",	"",	"7P3",	"7P3",	"7P3",	"",	"7P3",	"7P3",	"7P3",	"",	"7P1",	"7P1"],
+        ["M2",	"7P1",	"7P1",	"7P2",	"7P2",	"7P2",	"7P1",	"",	"7P2",	"7P2",	"7P2",	"",	"7P1",	"7P1",	"7P1",	"",	"7P2",	"7P2",	"7P2",	"",	"7P1",	"7P1"],
+        ["M3",	"7P3",	"7P3",	"7P3",	"7P2",	"7P2",	"7P2",	"",	"7P3",	"7P3",	"7P3",	"",	"7P2",	"7P2",	"7P2",	"",	"7P3",	"7P3",	"7P3",	"",	"7P2",	"7P2"]
+      ]
+    }
+  }
+}
