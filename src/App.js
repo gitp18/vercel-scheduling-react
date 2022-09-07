@@ -41,11 +41,11 @@ function App() {
   return (
     <>
       <div className="row">
-        <div className="col-md-6 resize_fit_left">
-            <img src={'InputImage/Product/' + inputSetFile} alt={inputSetFile} />
+        <div className="col-md-6 d-flex">
+            <img className="img-responsive img-fluid" src={'InputImage/Product/' + inputSetFile} alt={inputSetFile} />
         </div>
-        <div className="col-md-6 resize_fit_right">
-            <img src={'InputImage/Machine/' + inputSetFile} alt={inputSetFile} />
+        <div className="col-md-6 alignRight">
+            <img className="img-responsive img-fluid" src={'InputImage/Machine/' + inputSetFile} alt={inputSetFile} />
         </div>
       </div>
       <div className="row">
