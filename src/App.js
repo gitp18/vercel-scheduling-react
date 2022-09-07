@@ -2,31 +2,36 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import "bootstrap/dist/css/bootstrap.css";
 import './App.css';
+import { useParams } from "react-router-dom";
 
 // GEKKO, decade, 
 
+
+
+
 function App() {
   const [tableState, setTableState] = useState([[]]);
-
-
-
+  const [inputSetFile, setInputSetFile] = useState('Inputset1.png');
 
 
   useEffect(() => {
-    const url = 'https://vercel-nodejs-two.vercel.app/api/user/scheduleData';
-    const str = url.split("/").pop(); const substr = 'Input'; 
-    let inputSetFile = (str.includes(substr))? str+'.png' : 'Inputset1.png';
+    const queryParams = new URLSearchParams(window.location.search);
+    const str = queryParams.get('Inputset');
+    let inputSetFileName = str ? 'Inputset'+str+'.png' : 'Inputset1.png';
     
+    const url = 'https://vercel-nodejs-two.vercel.app/api/user/scheduleData';
+    //const str = url.split("/").pop(); const substr = 'Input'; let inputSetFile = (str.includes(substr))? str+'.png' : 'Inputset1.png';
 
-  axios.get(url)
+    setInputSetFile(inputSetFileName);
+    axios.get(url)
     .then(result => {
       const selectedDay = "7DP1P2P3";
 
       if (result.status === 200) {
-        let { days, displayData, products } = result.data;
+        let { displayData } = result.data;
         let selectedData = Object.entries(displayData);
         selectedData = selectedData.filter(item => item[0] == selectedDay)[0];
-        let { productData, machineData, tableData } = selectedData[1];
+        let { tableData } = selectedData[1];
         setTableState([...tableData]);
         //console.log(tableState);
       }
@@ -37,19 +42,22 @@ function App() {
   return (
     <>
       <div className="row">
-        <div className="col-md-12 App">
-            <img src="InputImage/Inputset1.png" alt="Inputset1" />
+        <div className="col-md-6 resize_fit_left">
+            <img src={'InputImage/Product/' + inputSetFile} alt={inputSetFile} />
+        </div>
+        <div className="col-md-6 resize_fit_right">
+            <img src={'InputImage/Machine/' + inputSetFile} alt={inputSetFile} />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-md-12"><br /><br /><hr /><br /><br />
         </div>
       </div>
       <div className="row">
         <div className="col-md-12 App">
         <table>
             <thead>
-            <tr>
-                {
-                tableState[0]?.map(item => <th>{item}</th>)
-                }
-            </tr>
+              <tr>{ tableState[0]?.map(item => <th>{item}</th>) }</tr>
             </thead>
             <tbody>
             {
