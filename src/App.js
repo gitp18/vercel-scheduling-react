@@ -18,6 +18,17 @@ function App() {
     const str = queryParams.get('Inputset');
     let inputSetFileName = str ? 'Inputset'+str+'.png' : 'Inputset1.png';
     
+    const apiUrl = 'https://myuniquesolutions.pythonanywhere.com/pro/1';
+    axios.get(apiUrl)
+    .then(result => {
+      console.log(result);
+      if (result.status === 200) {
+      }
+    });
+
+
+
+
     const url = 'https://vercel-nodejs-two.vercel.app/api/user/scheduleData';
     //const str = url.split("/").pop(); const substr = 'Input'; let inputSetFile = (str.includes(substr))? str+'.png' : 'Inputset1.png';
 
