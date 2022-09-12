@@ -24,12 +24,16 @@ function App() {
       case '3':
         var days = 5;
         break;
-      case '4':
-        var days = 7;
-        break;
       default:
         break;
     }
+/*
+      case '4':
+        var days = 7;
+        break;
+
+*/
+
     let totShifts = (days * 3);
     let cols1 = new Array(totShifts+1).fill('');
 
