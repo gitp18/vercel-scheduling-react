@@ -88,7 +88,7 @@ function App() {
   useEffect(() => {
     const queryParams = new URLSearchParams(window.location.search);
     let str = queryParams.get('Inputset');
-    str = (str)?str:1;
+    str = (str)?str:1; str = (str>3)?1:str;
     let inputSetFileName = str ? 'Inputset'+str+'.png' : 'Inputset1.png';
     setInputSetFile(inputSetFileName);
 
