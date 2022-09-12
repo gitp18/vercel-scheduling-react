@@ -22,10 +22,10 @@ function App() {
         var days = 7;
         break;
       case '3':
-        var days = 7;
+        var days = 5;
         break;
       case '4':
-        var days = 5;
+        var days = 7;
         break;
       default:
         break;
